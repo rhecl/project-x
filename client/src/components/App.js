@@ -9,7 +9,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    api.get('/')
+    api.get('/healthz')
       .then((res) => this.setState({ status: res.data }));
   }
 
