@@ -13,7 +13,7 @@ spec:
             backend:
               serviceName: api-service
               servicePort: 3001
-          - path: /
+          - path: /?(.*)
             backend:
               serviceName: web-app-service
               servicePort: 3000
