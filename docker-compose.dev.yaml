@@ -10,6 +10,9 @@ services:
       - db
     volumes:
       - ./api:/app
+    environment:
+      - DB_HOST=dba
+      - DB_PORT=27017
   client:
     build:
       dockerfile: Dockerfile.dev

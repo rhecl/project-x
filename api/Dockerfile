@@ -4,6 +4,6 @@ COPY go.mod .
 COPY go.sum .
 RUN go mod download
 COPY . .
-RUN go build -o main .
+RUN go build -o main ./cmd/api
 EXPOSE 3001
 CMD ["/app/main"]
