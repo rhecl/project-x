@@ -2,6 +2,7 @@ package mongo
 
 import (
 	"context"
+	"fmt"
 	"os"
 	"time"
 
@@ -17,6 +18,8 @@ func Connect() (*mongo.Client, error) {
 	if err != nil {
 		return nil, err
 	}
+
+	fmt.Print("Connected to DB")
 
 	return client, nil
 }
